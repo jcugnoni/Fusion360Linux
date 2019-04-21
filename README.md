@@ -88,7 +88,7 @@ cat << EOF > runFusion360.sh
 
 #!/bin/bash
 
-env WINEPREFIX="/home/jcugnoni/Fusion360" /opt/wine-staging/bin/wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/jcugnoni/Fusion360/dosdevices/c:/ProgramData/Microsoft/Windows/Start\ Menu/Programs/Autodesk/Autodesk\ Fusion\ 360.lnk
+env WINEPREFIX="/home/jcugnoni/Fusion360" /opt/wine-staging/bin/wine C:\\\\\\\\windows\\\\\\\\command\\\\\\\\start.exe /Unix /home/jcugnoni/Fusion360/dosdevices/c:/ProgramData/Microsoft/Windows/Start\ Menu/Programs/Autodesk/Autodesk\ Fusion\ 360.lnk
 
 EOF
 
