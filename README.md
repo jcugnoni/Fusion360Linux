@@ -21,7 +21,7 @@ software-properties-gtk --open-tab=4
 
 #and finally vulkan
 
-sudo apt-get install vulkan-tools
+sudo apt-get install vulkan-utils
 
 # install winehg-staging (wine 4.6)
 
