@@ -9,7 +9,8 @@ Procedure adapted from https://gist.github.com/probonopd/0fab254aa0b6fc371d8db64
 
 # Graphics driver and Vulkan support (not sure if it is really mandatory...)
 
-#install nvidia proprietary drivers from additionnal drivers, test with version 384 for me 
+#NVIDIA install nvidia proprietary drivers from additionnal drivers, test with version 384 for me 
+#AMD: probably fairly similar, but see online docs to enable Vulkan on recent AMD GPU
 
 sudo add-apt-repository ppa:graphics-drivers/ppa
 
@@ -22,6 +23,9 @@ software-properties-gtk --open-tab=4
 #and finally vulkan
 
 sudo apt-get install vulkan-utils
+
+#for intel GPU, also install mesa vulkna drivers:
+sudo apt-get install mesa-vulkan-drivers 
 
 # install winehg-staging (wine 4.6)
 
