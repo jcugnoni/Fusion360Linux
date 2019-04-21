@@ -7,7 +7,7 @@ Procedure adapted from https://gist.github.com/probonopd/0fab254aa0b6fc371d8db64
 
 #please note that you need to start with no initial wine config in ~/.wine. If not, create a new "prefix" (=config) and set WINEPREFIX=your_path_to_wine_prefix
 
-#add Vulkan support
+# Graphics driver and Vulkan support (not sure if it is really mandatory...)
 
 #install nvidia proprietary drivers from additionnal drivers, test with version 384 for me 
 
@@ -23,7 +23,7 @@ software-properties-gtk --open-tab=4
 
 sudo apt-get install vulkan-tools
 
-#install winehg-staging
+# install winehg-staging (wine 4.6)
 
 sudo dpkg --add-architecture i386 
 
@@ -37,7 +37,7 @@ sudo apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ xenial ma
 
 sudo apt install --install-recommends winehq-staging      
 
-#update winetricks
+# update winetricks
 
 cd "${HOME}"
 
@@ -46,7 +46,7 @@ wget  https://raw.githubusercontent.com/Winetricks/winetricks/master/src/winetri
 chmod +x winetricks
 
 
-#DLLs
+# DLLs
 
 ~/winetricks atmlib gdiplus msxml3 msxml6 vcrun2017 corefonts fontsmooth=rgb winhttp win10
 
@@ -60,7 +60,7 @@ WINEPREFIX=~/.wine ./setup_dxvk.sh install
 
 cd ..
 
-#Fusion 360
+# Patch and Install Fusion 360
 
 wget https://dl.appstreaming.autodesk.com/production/installers/Fusion%20360%20Admin%20Install.exe
 
