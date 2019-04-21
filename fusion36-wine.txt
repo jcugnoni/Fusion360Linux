@@ -19,6 +19,7 @@ wget -nc https://dl.winehq.org/wine-builds/winehq.key
 sudo apt-key add winehq.key
 
 sudo apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ xenial main' 
+sudo apt-get update
 
 # install winehq staging (4.6 for me)
 sudo apt install --install-recommends winehq-staging      
