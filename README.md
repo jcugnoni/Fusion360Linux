@@ -86,15 +86,18 @@ wine setup/streamer.exe -p deploy -g -f log.txt --quiet
 
 cat << EOF > runFusion360.sh
 #!/bin/bash
-env WINEPREFIX="/home/jcugnoni/Fusion360" /opt/wine-staging/bin/wine C:\\windows\\command\\start.exe /Unix /home/jcugnoni/Fusion360/dosdevices/c:/ProgramData/Microsoft/Windows/Start\ Menu/Programs/Autodesk/Autodesk\ Fusion\ 360.lnk
+env WINEPREFIX="/home/jcugnoni/Fusion360" /opt/wine-staging/bin/wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/jcugnoni/Fusion360/dosdevices/c:/ProgramData/Microsoft/Windows/Start\ Menu/Programs/Autodesk/Autodesk\ Fusion\ 360.lnk
 EOF
 
-
+chmod +x runFusion360.sh
 
 # RUN FUSION 360 a first time !
 
+./runFusion360.sh
+
 # Fixing issues with adcefbrowser and online connection:
 
-#- 1. run "winecfg", Disable dx11 as a default setting (ps JC: indeed d3d11 was not detected by fusion in my default config, so I did not change that in the end), then add the adcefbrowser.exe in the applications tab in winecfg (its in [AUTODESK PATH]/webdeploy/production/[folder with the most files in it, more than 3]/WIN64/ ) and create an override in the libraries tab to set d3d11.dll on native for adcefbrowser.exe.
+#- 1. run winecfg, change platform to Win7 for both Default and eventually also adcefbrowser app if specified (see below)
 
-#- 2. change platform to Win7 for both Default and adcefbrowser config.
+#- 2. run "winecfg", Disable dx11 as a default setting (ps JC: indeed d3d11 was not detected by fusion in my default config, so I did not change that in the end), then add the adcefbrowser.exe in the applications tab in winecfg (its in [AUTODESK PATH]/webdeploy/production/[folder with the most files in it, more than 3]/WIN64/ ) and create an override in the libraries tab to set d3d11.dll on native for adcefbrowser.exe. This point was not needed for me.
+
