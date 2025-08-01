@@ -68,7 +68,7 @@ cd ..
 
 # Patch and Install Fusion 360
 
-wget https://dl.appstreaming.autodesk.com/production/installers/Fusion%20360%20Admin%20Install.exe
+wget wget dl.appstreaming.autodesk.com/production/installers/Fusion%20360%20Admin%20Install.exe
 
 sudo apt-get install p7zip-full git curl
 
